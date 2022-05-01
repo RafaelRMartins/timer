@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --base-color: 194;
+  --primary-color: hsla(var(--base-color), 97%, 31%);
+  --secondary-color: #323238;
+  --bg-secondary-color: #E1E1E6;
+  --bg-color: #fff;
+
+  font-size: 62.5%;
+}
+
+body{
+  background: var(--bg-color);
+  color: var(--secondary-color);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+i{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+main{
+  display: grid;
+  justify-items: center;
+}
+
+#timer{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+nav{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+nav button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+nav path{
+  fill: var(--secondary-color);
+}
+
+aside{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+aside button{
+  background: var(--bg-secondary-color);
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  width: 138px;
+  height: 152px;
+}
+
+aside .selected path, aside .selected{
+  background: var(--primary-color);
+  fill: var(--bg-color);
+}
+
+@media (max-width: 650px){
+  body{
+    flex-direction: column;
+  }
+}
